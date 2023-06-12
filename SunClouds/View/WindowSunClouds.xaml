@@ -8,12 +8,50 @@
         Title="WindowSunClouds" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="133*"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Column="0" Click="GoMainPage"/>
-        <Button Grid.Column="1" Click="GoSettingsPage"/>
-        <Frame Grid.Column="2" x:Name="PageFrame" NavigationUIVisibility="Hidden"/>
+        <Grid Grid.ColumnSpan="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="71*"/>
+                <RowDefinition Height="363*"/>
+            </Grid.RowDefinitions>
+            <TextBlock HorizontalAlignment="Left" Margin="24,0,0,0" TextWrapping="Wrap" Text="Название города сюда" VerticalAlignment="Center" Height="33" RenderTransformOrigin="0.5,0.5" Width="226">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <Button Content="иконка погоды сейчас" HorizontalAlignment="Left" Margin="56,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="54" Width="56"/>
+            <Button Content="погода потом" HorizontalAlignment="Left" Margin="64,94,0,0" Grid.Row="1" VerticalAlignment="Top" Height="44" Width="40"/>
+            <Button Content="погода потом" HorizontalAlignment="Left" Margin="64,172,0,0" Grid.Row="1" VerticalAlignment="Top" Height="44" Width="40"/>
+            <Button Content="погода потом" HorizontalAlignment="Left" Margin="64,251,0,0" Grid.Row="1" VerticalAlignment="Top" Height="44" Width="40"/>
+            <TextBlock HorizontalAlignment="Left" Margin="5,101,0,0" Grid.Row="1" TextWrapping="Wrap" Text="время" VerticalAlignment="Top" Height="27" Width="40"/>
+            <TextBlock HorizontalAlignment="Left" Margin="5,184,0,0" Grid.Row="1" TextWrapping="Wrap" Text="время" VerticalAlignment="Top" Height="27" Width="40"/>
+            <TextBlock HorizontalAlignment="Left" Margin="5,257,0,0" Grid.Row="1" TextWrapping="Wrap" Text="время" VerticalAlignment="Top" Height="27" Width="40"/>
+            <TextBlock HorizontalAlignment="Left" Margin="163,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="точная темпра" VerticalAlignment="Top" Width="73"/>
+            <TextBlock HorizontalAlignment="Left" Margin="163,37,0,0" Grid.Row="1" TextWrapping="Wrap" Text="ощущ темпра" VerticalAlignment="Top" Width="73"/>
+            <TextBlock HorizontalAlignment="Left" Margin="137,102,0,0" Grid.Row="1" TextWrapping="Wrap" Text="точная темпра" VerticalAlignment="Top" Width="52" Height="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="137,123,0,0" Grid.Row="1" TextWrapping="Wrap" Text="ощущ темпра" VerticalAlignment="Top" Width="52" Height="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="134,173,0,0" Grid.Row="1" TextWrapping="Wrap" Text="точная темпра" VerticalAlignment="Top" Width="52" Height="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="134,194,0,0" Grid.Row="1" TextWrapping="Wrap" Text="ощущ темпра" VerticalAlignment="Top" Width="52" Height="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="134,252,0,0" Grid.Row="1" TextWrapping="Wrap" Text="точная темпра" VerticalAlignment="Top" Width="52" Height="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="134,273,0,0" Grid.Row="1" TextWrapping="Wrap" Text="ощущ темпра" VerticalAlignment="Top" Width="52" Height="24"/>
+
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="61*"/>
+
+                <RowDefinition Height="373*"/>
+            </Grid.RowDefinitions>
+            <Button Click="GoMainPage" Margin="10,20,388,5"/>
+            <Button Click="GoSettingsPage" Margin="149,20,246,5"/>
+            <Frame x:Name="PageFrame" NavigationUIVisibility="Hidden" Margin="304,5,10,5"/>
+        </Grid>
     </Grid>
 </Window>
