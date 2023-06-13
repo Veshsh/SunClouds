@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SunClouds.View"
         mc:Ignorable="d"
-        Title="WindowSunClouds" Height="450" Width="800">
+        Title="WindowSunClouds" Height="450" Width="800" MinWidth="438" MinHeight="274">
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="238"/>
+            <ColumnDefinition Width="238" MinWidth="238"/>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition/>
+            <RowDefinition Height="50" MinHeight="50"/>
+            <RowDefinition MinHeight="360"/>
         </Grid.RowDefinitions>
-        <Button Click="GoMainPage"  Grid.Column="2" Width="200" HorizontalAlignment="Left" />
-        <Button Click="GoSettingsPage" Grid.Column="2" Width="200" HorizontalAlignment="Right" />
+        <Button Click="GoMainPage"  Grid.Column="2" Width="75" HorizontalAlignment="Left" />
+        <Button Click="GoSettingsPage" Grid.Column="2" Width="75" HorizontalAlignment="Right" />
         <Frame x:Name="PageFrame" NavigationUIVisibility="Hidden" Grid.Column="2" Grid.Row="1"/>
         <TextBlock Text="Город" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Grid Grid.Row="1">
