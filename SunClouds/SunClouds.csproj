@@ -82,8 +82,11 @@
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\WindowSunCloudsPage\SettingsViewModel.cs" />
     <Compile Include="ViewModel\WindowSunCloudsPage\SunCloudsViewModel.cs" />
-    <Compile Include="View\TimeCard.xaml.cs">
+    <Compile Include="View\Card\TimeCard.xaml.cs">
       <DependentUpon>TimeCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Card\SityCard.xaml.cs">
+      <DependentUpon>SityCard.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WindowSunClouds.xaml.cs">
       <DependentUpon>WindowSunClouds.xaml</DependentUpon>
@@ -94,6 +97,10 @@
     <Compile Include="View\WindowSunCloudsPage\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\Card\SityCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -107,7 +114,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\TimeCard.xaml">
+    <Page Include="View\Card\TimeCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,6 +169,13 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\Day.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\MorningEvening.png" />
+    <Resource Include="Img\Night.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

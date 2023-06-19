@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SunClouds"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+ Title="MainWindow" Height="450" Width="750" MinWidth="500" MinHeight="350">
+    <Window.Background>
+        <ImageBrush ImageSource="{Binding BackGround}"/>
+    </Window.Background>
     <Grid>
-        <Button Command="{Binding Path=Enter}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="260" MinWidth="260"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="180" MinHeight="180"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text="SunClouds" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Button Grid.Row="2" Content="Узнать Погоду" Command="{Binding Path=Enter}" Margin="10"/>
+            <ComboBox Grid.Row="1" ItemsSource="{Binding ComboBoxStart}" Margin="10" VerticalContentAlignment="Center"/>
+        </Grid>
     </Grid>
 </Window>
