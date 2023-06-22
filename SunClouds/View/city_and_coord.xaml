@@ -16,8 +16,8 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <StackPanel Grid.ColumnSpan="2" Grid.RowSpan="2"  Background="#FF3281A1"/>
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Background="#993281A1"/>
+        <StackPanel Grid.ColumnSpan="2" Grid.RowSpan="2"  Background="{Binding Path=UsEl_bg_panel_color}"/>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Background="{Binding Path=UsEl_panel_color}"/>
         <Button x:Name="close_btn_cities" Grid.Column="1"  Content="X" Background="#00DDDDDD" FontFamily="Jura" FontSize="44" Foreground="White" BorderBrush="#00707070" FontWeight="Bold"/>
         <TextBlock  HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Path=cit_name_fav}"  VerticalAlignment="Center" Foreground="White" FontFamily="Jura" FontSize="54" FontWeight="Bold"/>
         <TextBlock  HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="{Binding Path=cit_coord}" VerticalAlignment="Center" Foreground="White" FontFamily="Jura" FontSize="34" FontWeight="Bold"/>

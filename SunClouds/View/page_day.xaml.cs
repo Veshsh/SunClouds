@@ -22,6 +22,8 @@ namespace end
     {
         public string cit_name_main { get; set; } = "Гиперборея";
         public string cit_name_fav { get; set; } = "Гиперборея";
+        public string panel_color { get; set; } = "#CC4BAFD7";
+        public string bg_panel_color { get; set; } = "#CCFAADB6";
         public string cit_coord { get; set; } = "90 ° 00 ′ 00 ″ .Долготы не имеет, так как является точкой схождения всех меридианов";
         public page_day()
         {

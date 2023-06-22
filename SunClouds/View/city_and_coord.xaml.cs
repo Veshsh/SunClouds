@@ -20,6 +20,8 @@ namespace end.View
     /// </summary>
     public partial class city_and_coord : UserControl
     {
+        public string UsEl_panel_color { get; set; } = "#CC4BAFD7";
+        public string UsEl_bg_panel_color { get; set; } = "#FF3281A1";
         public city_and_coord()
         {
             InitializeComponent();
