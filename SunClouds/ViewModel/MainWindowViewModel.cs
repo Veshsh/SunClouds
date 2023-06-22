@@ -31,5 +31,73 @@ namespace SunClouds.ViewModel
         public string Time1 { get; set; } = "11:11";
         public string Time2 { get; set; } = "22:22";
         public string Time3 { get; set; } = "33:33";
+
+        public static Uri WeatherIcon0 {
+            get
+            {
+                if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else
+                    return new Uri("", UriKind.Relative);
+
+            }
+        }
+        public static Uri WeatherIcon1
+        {
+            get
+            {
+                if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else
+                    return new Uri("", UriKind.Relative);
+
+            }
+        }
+        public static Uri WeatherIcon2
+        {
+            get
+            {
+                if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else
+                    return new Uri("", UriKind.Relative);
+
+            }
+        }
+        public static Uri WeatherIcon3
+        {
+            get
+            {
+                if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else if ()
+                    return new Uri("", UriKind.Relative);
+                else
+                    return new Uri("", UriKind.Relative);
+
+            }
+        }
     }
 }
