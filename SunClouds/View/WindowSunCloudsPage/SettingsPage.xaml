@@ -5,53 +5,51 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SunClouds.View.WindowSunCloudsPage"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="350" d:DesignWidth="500"
       Title="SettingsPage">
-
-    <Grid>
+    <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.8*"/>
-            <RowDefinition Height="0.1*"/>
-            <RowDefinition Height="0.8*"/>
-            <RowDefinition Height="0.55*"/>
-            <RowDefinition Height="0.8*"/>
             <RowDefinition Height="2*"/>
-            <RowDefinition Height="0.5*"/>
             <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
             <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid  Grid.Row="6" Background="#CC4BAFD7">
+        <Border Grid.Column="1" Grid.RowSpan="99" Background="White" Width="3" HorizontalAlignment="Right"/>
+        <TextBlock Style="{StaticResource ResourceKey=TextBlock}" Text="Ваш основной город:" HorizontalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1"/>
+        <TextBlock Grid.Row="2" Style="{StaticResource ResourceKey=TextBlock}" Text="Избранные города:" HorizontalAlignment="Center"/>
+        <WrapPanel Grid.Row="3" Background="{Binding Them1}" Opacity="0.5"/>
+        <Grid Grid.Row="4">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="3*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBox TextWrapping="Wrap" BorderBrush="#CC4BAFD7" SelectionBrush="#CC4BAFD7" Background="#CC4BAFD7" FontSize="20" FontFamily="Jura" Foreground="White" Text="cit_name_add" TextAlignment="Center"/>
-            <Button Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Добавить город" FontSize="20" FontFamily="Jura" Foreground="White" Background="#00DDDDDD" BorderBrush="#00707070"/>
-            <Button Grid.Column="1" Content="X" Foreground="White" Background="#00DDDDDD" FontWeight="Bold" FontSize="18" BorderBrush="#00707070"/>
+            <TextBox BorderBrush="Transparent" Background="Transparent" Text="{Binding SytyAdd}" FontFamily="Jura" Foreground="White" SelectionBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <Button Grid.Column="1" Content="Добавить город" Style="{StaticResource ResourceKey=Button}"  FontSize="10"/>
         </Grid>
-        <Grid  Grid.Row="8">
+        <TextBlock Grid.Row="5" Style="{StaticResource ResourceKey=TextBlock}" Text="Исчисление градусов:" HorizontalAlignment="Center"/>
+        <Grid Grid.Row="6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <RadioButton Grid.Column="1" GroupName="q" Content="Фаренгейт ℉" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#CC4BAFD7" BorderBrush="White" Foreground="White"/>
-            <RadioButton GroupName="q" Content="Цельсии ℃" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#CC4BAFD7" BorderBrush="White" Foreground="White"/>
+            <Grid Background="{Binding Them1}" Opacity="0.5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <RadioButton GroupName="grad" IsChecked="True" Content="Цельсия С°" Padding="20,0,20,0" Foreground="White" FontFamily="Jura" />
+            </Grid>
+            <Grid Grid.Column="1" Background="{Binding Them1}" Opacity="0.5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <RadioButton GroupName="grad" Content="Френгейт F°" Padding="20,0,20,0" Foreground="White" FontFamily="Jura"/>
+            </Grid>
         </Grid>
-        <TextBlock HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="Ваш основной город:" VerticalAlignment="Center" FontSize="30" FontFamily="Jura" Foreground="White"/>
-        <StackPanel Background="#CC4BAFD7" Grid.Column="1" Grid.Row="3">
-            <TextBlock  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=cit_name_main}" FontSize="20" FontFamily="Jura" Foreground="White"/>
-        </StackPanel>
-        <TextBlock HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="Избранные города:" VerticalAlignment="Center" FontSize="30" FontFamily="Jura" Foreground="White"/>
-        <StackPanel Grid.Row="5" Background="#CCFAADB6" Orientation="Horizontal"/>
-        <Button x:Name="save_btn" Background="#CC4BAFD7" Content="Сохранить" HorizontalAlignment="Stretch" Grid.Row="9" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Jura" BorderBrush="#00000000" Foreground="White" FontSize="20"/>
-
+        <Button Grid.Row="8" Content="Сохранить" Command="{Binding SaveSetings}" Style="{StaticResource ResourceKey=Button}" FontSize="10"/>
     </Grid>
 </Page>
+      
